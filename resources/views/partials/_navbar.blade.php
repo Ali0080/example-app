@@ -35,11 +35,10 @@
              <ul>
                <li><a href="{{route('article.index')}}" style="font-weight: bold">خانه</a></li>
 
-                <li><a href="#">سیاسی</a></li>
-                <li><a href="{{route('category')}}">اقتصادی</a></li>
-                <li><a href="#">ورزشی</a></li>
-                <li><a href="#">اجتماعی</a></li>
-                <li><a href="#">بین الملل</a></li>
+                @foreach ($categories as $category)
+                <li><a href="{{route('category', $category->slug)}}">{{ $category->name }}</a></li>
+                @endforeach
+
              </ul>
           </div>
        </div>

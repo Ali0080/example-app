@@ -9,9 +9,9 @@
                @foreach ($articles as $article)
                <div class="col-md-4">
                   <div class="post-box">
-                     <a href="#">
+                     <a href="{{ route('article.show', $article->id) }}">
                         <figure>
-                           <img src="img/290667058azer news.jpg" alt="">
+                           <img src="{{ route('article.show', $article->id) }}" alt="">
                            <figcaption class="meta-fig">
                               <span><i class="fa fa-clock-o"></i> 99/3/20</span>&nbsp;
                               <span><i class="fa fa-comment-o"></i> 12</span>
@@ -26,13 +26,13 @@
                            <h5>{{ $article->title }}</h5>
                            <p>{{ $article->lead }}</p>
                            <div class="text-rigt">
-                     <a href="#">ادامه ...</a></div>
+                     <a href="{{ route('article.show', $article->id) }}">ادامه ...</a></div>
                      </div>
                      </a>
                   </div>
                </div>
                @endforeach
-            
+
             </div>
             <div class="col-md-3 main-content">
                <div class="l-sidebar">
